@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    height: 50px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+button{
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 12px;
+    border-radius: 10px;
+    gap: 12px;
+}
+#score, #results{
+    min-height: 25px;
+    background-color: white;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -3,77 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        let userScore = 0;
-        let computerScore = 0;
+    <main>
+        <div id="container">
+            <div id="score"></div>
+            <div id = "results"></div>
+            <div id="buttonContainer">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+        </div>
+    </main>
+    <footer>Spencer Schmalbach &copy; 2025</footer>
 
-        function getComputerChoice(){
-            let rNum =  Math.floor(Math.random()*3);
-            switch(rNum){
-                case 0: return "rock";
-                case 1: return "paper";
-                case 2: return "scissors";
-            }
-        }
 
-        function getUserChoice(){
-            let input = prompt("Enter choice(Rock, Paper, Scissors):").toLowerCase();
-            while(!(input === "rock" || input === "paper" || input === "scissors")){
-                input = prompt("Invalid input, Enter choice(Rock, Paper, Scissors):").toLowerCase();
-            }
-            return input;
-        }
-
-        function playRound(){
-            let userChoice = getUserChoice();
-            let computerChoice = getComputerChoice();
-
-            if(userChoice === "rock"){
-                if(computerChoice === "scissors"){
-                    console.log("Computer chose scissors, you win!");
-                    userScore++;
-                }else if(computerChoice === "paper"){
-                    console.log("Computer chose paper, you lose!");
-                    computerScore++;
-                }else{
-                    console.log("Computer chose rock, tie!");
-                }
-            }else if(userChoice === "paper"){
-                if(computerChoice === "rock"){
-                    console.log("Computer chose rock, you win!");
-                    userScore++;
-                }else if(computerChoice === "scissors"){
-                    console.log("Computer chose scissors, you lose!");
-                    computerScore++;
-                }else{
-                    console.log("Computer chose paper, tie!");
-                }
-            }else if(userChoice === "scissors"){
-                if(computerChoice === "paper"){
-                    console.log("Computer chose paper, you win!");
-                    userScore++;
-                }else if(computerChoice === "rock"){
-                    console.log("Computer chose rock, you lose!");
-                    computerScore++;
-                }else{
-                    console.log("Computer chose scissors, tie!");
-                }
-            }
-            console.log("Score: "+userScore+" - "+computerScore);
-        }
-
-        function playGame(){
-            playRound();
-            playRound();
-            playRound();
-            playRound();
-            playRound();
-        }
-
-        playGame();
-        </script>
+    <script src="script.js"></script>
 </body>
 </html>
